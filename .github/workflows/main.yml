@@ -28,9 +28,7 @@ jobs:
 
       - name: Build and archive
         run: |
-          # Replace 'QWatch' with your actual scheme name!
-          xcodebuild -scheme QWatch -sdk iphoneos -configuration Release archive -archivePath $PWD/build/App.xcarchive
-
+          xcodebuild -scheme "qwatch WatchKit App" -sdk iphoneos -configuration Release archive -archivePath $PWD/build/App.xcarchive
       - name: Export .ipa
         run: |
           # Create a minimal ExportOptions.plist for ad-hoc export
